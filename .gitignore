@@ -1,0 +1,21 @@
+# Python environment and cache
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local data, trained models, and generated artifacts
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+!artifacts/figures/
+artifacts/figures/*
+!artifacts/figures/.gitkeep
+models/*
+!models/.gitkeep
+
+# Local Streamlit state
+.streamlit/secrets.toml
