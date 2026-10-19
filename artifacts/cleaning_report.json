@@ -1,0 +1,32 @@
+{
+  "rows_before_cleaning": 1044,
+  "exact_duplicate_rows_removed": 0,
+  "invalid_or_missing_target_rows_removed": 0,
+  "rows_after_cleaning": 1044,
+  "numeric_conversion_failures": {
+    "age": 0,
+    "Medu": 0,
+    "Fedu": 0,
+    "traveltime": 0,
+    "studytime": 0,
+    "failures": 0,
+    "famrel": 0,
+    "freetime": 0,
+    "goout": 0,
+    "Dalc": 0,
+    "Walc": 0,
+    "health": 0,
+    "absences": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0
+  },
+  "remaining_missing_values": {},
+  "cleaning_notes": [
+    "Whitespace is normalized in text fields.",
+    "Numeric UCI columns are coerced to numeric values.",
+    "Only exact duplicate records are removed; math and Portuguese course records remain distinct.",
+    "Records with a missing or out-of-range final grade are removed.",
+    "Any remaining feature-level missing values are imputed inside each model pipeline."
+  ]
+}

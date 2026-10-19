@@ -1,0 +1,275 @@
+{
+  "generated_at_utc": "2026-10-19T07:46:29.010995+00:00",
+  "training_rows": 835,
+  "test_rows": 209,
+  "random_state": 42,
+  "test_size": 0.2,
+  "cv_folds": 5,
+  "selection_rule": "Candidate with the lowest mean cross-validation MAE on training data.",
+  "selected_model": "Random Forest",
+  "holdout_metrics": {
+    "mae": 2.498838050705275,
+    "rmse": 3.4174958905099375,
+    "r2": 0.24458861057604064
+  },
+  "model_input": {
+    "feature_columns": [
+      "school",
+      "sex",
+      "age",
+      "address",
+      "famsize",
+      "Pstatus",
+      "Medu",
+      "Fedu",
+      "Mjob",
+      "Fjob",
+      "reason",
+      "guardian",
+      "traveltime",
+      "studytime",
+      "failures",
+      "schoolsup",
+      "famsup",
+      "paid",
+      "activities",
+      "nursery",
+      "higher",
+      "internet",
+      "romantic",
+      "famrel",
+      "freetime",
+      "goout",
+      "Dalc",
+      "Walc",
+      "health",
+      "absences",
+      "subject"
+    ],
+    "numeric_features": {
+      "age": {
+        "minimum": 15,
+        "maximum": 22,
+        "default": 17,
+        "integer": true
+      },
+      "Medu": {
+        "minimum": 0,
+        "maximum": 4,
+        "default": 3,
+        "integer": true
+      },
+      "Fedu": {
+        "minimum": 0,
+        "maximum": 4,
+        "default": 2,
+        "integer": true
+      },
+      "traveltime": {
+        "minimum": 1,
+        "maximum": 4,
+        "default": 1,
+        "integer": true
+      },
+      "studytime": {
+        "minimum": 1,
+        "maximum": 4,
+        "default": 2,
+        "integer": true
+      },
+      "failures": {
+        "minimum": 0,
+        "maximum": 3,
+        "default": 0,
+        "integer": true
+      },
+      "famrel": {
+        "minimum": 1,
+        "maximum": 5,
+        "default": 4,
+        "integer": true
+      },
+      "freetime": {
+        "minimum": 1,
+        "maximum": 5,
+        "default": 3,
+        "integer": true
+      },
+      "goout": {
+        "minimum": 1,
+        "maximum": 5,
+        "default": 3,
+        "integer": true
+      },
+      "Dalc": {
+        "minimum": 1,
+        "maximum": 5,
+        "default": 1,
+        "integer": true
+      },
+      "Walc": {
+        "minimum": 1,
+        "maximum": 5,
+        "default": 2,
+        "integer": true
+      },
+      "health": {
+        "minimum": 1,
+        "maximum": 5,
+        "default": 4,
+        "integer": true
+      },
+      "absences": {
+        "minimum": 0,
+        "maximum": 75,
+        "default": 2,
+        "integer": true
+      }
+    },
+    "categorical_features": {
+      "school": {
+        "options": [
+          "GP",
+          "MS"
+        ],
+        "default": "GP"
+      },
+      "sex": {
+        "options": [
+          "F",
+          "M"
+        ],
+        "default": "F"
+      },
+      "address": {
+        "options": [
+          "R",
+          "U"
+        ],
+        "default": "U"
+      },
+      "famsize": {
+        "options": [
+          "GT3",
+          "LE3"
+        ],
+        "default": "GT3"
+      },
+      "Pstatus": {
+        "options": [
+          "A",
+          "T"
+        ],
+        "default": "T"
+      },
+      "Mjob": {
+        "options": [
+          "at_home",
+          "health",
+          "other",
+          "services",
+          "teacher"
+        ],
+        "default": "other"
+      },
+      "Fjob": {
+        "options": [
+          "at_home",
+          "health",
+          "other",
+          "services",
+          "teacher"
+        ],
+        "default": "other"
+      },
+      "reason": {
+        "options": [
+          "course",
+          "home",
+          "other",
+          "reputation"
+        ],
+        "default": "course"
+      },
+      "guardian": {
+        "options": [
+          "father",
+          "mother",
+          "other"
+        ],
+        "default": "mother"
+      },
+      "schoolsup": {
+        "options": [
+          "no",
+          "yes"
+        ],
+        "default": "no"
+      },
+      "famsup": {
+        "options": [
+          "no",
+          "yes"
+        ],
+        "default": "yes"
+      },
+      "paid": {
+        "options": [
+          "no",
+          "yes"
+        ],
+        "default": "no"
+      },
+      "activities": {
+        "options": [
+          "no",
+          "yes"
+        ],
+        "default": "no"
+      },
+      "nursery": {
+        "options": [
+          "no",
+          "yes"
+        ],
+        "default": "yes"
+      },
+      "higher": {
+        "options": [
+          "no",
+          "yes"
+        ],
+        "default": "yes"
+      },
+      "internet": {
+        "options": [
+          "no",
+          "yes"
+        ],
+        "default": "yes"
+      },
+      "romantic": {
+        "options": [
+          "no",
+          "yes"
+        ],
+        "default": "no"
+      },
+      "subject": {
+        "options": [
+          "math",
+          "portuguese"
+        ],
+        "default": "portuguese"
+      }
+    },
+    "excluded_for_early_intervention": {
+      "G3": "The final grade is the prediction target.",
+      "G1": "First-period grade is excluded to avoid assessment-grade leakage.",
+      "G2": "Second-period grade is excluded to avoid assessment-grade leakage."
+    },
+    "availability_note": "Only enter values genuinely available at the time of the intervention. For example, absences should reflect a defined attendance snapshot."
+  },
+  "explainability_method": "Permutation importance on the held-out test set, scored by MAE increase.",
+  "model_use_note": "Predictions are support indicators for human review, not automated academic decisions."
+}
